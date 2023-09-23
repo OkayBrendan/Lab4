@@ -95,9 +95,49 @@ void arithmetic() {
 	cout << " = " << arithSum << endl;
 }
 
-	
-	void geometric() {
-	// I recommend writing your geometric series code here
+// Completed. Calculates geometric.
+void geometric() {
+
+	int startingNumber;
+	int multiplicationFactor;
+	int elementAmount;
+	int geoSum = 0;
+
+	// Gets starting number.
+	cout << "You have chosen:" << '\n' << "\tGeometric" << endl;
+	cout << "Please enter the starting number: ";
+	cin >> startingNumber;
+
+	// Gets multiplication factor.
+	cout << "Please enter the number to multipy by: ";
+	cin >> multiplicationFactor;
+
+	// If number is less than or equal to 0, get input again.
+	do {
+		cout << "Please enter the number of elements in the series: ";
+		cin >> elementAmount;
+		if (elementAmount > 0) {
+			break;
+		}
+		else if (elementAmount <= 0) {
+			cout << "Invalid number detected. Try again: ";
+			cin >> elementAmount;
+		}
+	} while (elementAmount <= 0);
+
+	// Loop and calculation for geometric.
+	for (int i = 0; i < elementAmount; i++) {
+		int series = startingNumber * pow(multiplicationFactor, i);
+		geoSum += series;
+
+		if (i != 0) {
+			cout << " + ";
+		}
+
+		cout << series;
+	}
+
+	cout << " = " << geoSum << endl;
 }
 
 // Completed. Declares invalid selection and restarts program.

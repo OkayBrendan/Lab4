@@ -1,2 +1,3 @@
 ﻿  Lab4.cpp
+C:\Users\washn\source\repos\Lab4\Lab4\Lab4.cpp(127,14): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
   Lab4.vcxproj -> C:\Users\washn\source\repos\Lab4\x64\Debug\Lab4.exe
